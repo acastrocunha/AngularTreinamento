@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+
+<html lang="pt-br" ng-app="myApp">
+
+        <head>
+            <meta charset="UTF-8" />
+            <title> Multiparâmetros </title>
+
+            <!-- Importando AngularJS -->
+            <script src="../angular.min.js"></script>
+        </head>
+        <body ng-controller="control">
+            <input type="text" placeholder="Nome..." ng-model="contato.nome" />
+            <input type="number" placeholder="Idade..." ng-model="contato.idade" />
+            <input type="number" placeholder="Telefone..." ng-model="contato.telefone" />
+            <br><br>
+            <input type="button" value="Cadastrar" ng-click="cadastrar(contato)"/>
+            <br><br>
+            <ul ng-repeat="cont in contatos">
+              <li>Nome: {{cont.nome}}</li>
+              <li>Idade: {{cont.idade}}</li>
+              <li>Telefone: {{cont.telefone}}</li>
+            </ul>
+
+            <script src = "multiparam.controller.js"> </script>
+        </body>
+</html>
